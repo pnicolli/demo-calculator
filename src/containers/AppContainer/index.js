@@ -16,6 +16,12 @@ class AppContainer extends Component {
     this.setState(this.initialState);
   };
 
+  resetCurrentValue = () => {
+    this.setState(() => ({
+      currentValue: 0,
+    }));
+  };
+
   invertSign = () => {
     this.setState((prevState, props) => ({
       currentValue: prevState.currentValue * (-1),
@@ -24,7 +30,11 @@ class AppContainer extends Component {
 
   render() {
     return (
-      <App />
+      <App
+        resetState={this.resetState}
+        resetCurrentValue={this.resetCurrentValue}
+        invertSign={this.invertSign}
+      />
     );
   }
 }
