@@ -1,15 +1,29 @@
 import React from 'react';
+import { func } from 'prop-types';
 import './styles.css';
+import Display from '../../views/Display';
 
-const App = props => (
-  <div className="App">
-    <div className="App-header">
-      <h2>Welcome to React</h2>
+const App = ({
+  currentValue,
+  resetState,
+  resetCurrentValue,
+  invertSign,
+}) => (
+  <div className="app">
+    <div className="app-header">
+      <h1>Demo - Calculator</h1>
     </div>
-    <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
-    </p>
+    <div className="app-content">
+      <Display value={currentValue} />
+    </div>
   </div>
 );
+
+App.propTypes = {
+  currentValue: Display.propTypes.value,
+  resetState: func,
+  resetCurrentValue: func,
+  invertSign: func,
+};
 
 export default App;

@@ -31,6 +31,7 @@ class AppContainer extends Component {
   render() {
     return (
       <App
+        currentValue={this.state.currentValue}
         resetState={this.resetState}
         resetCurrentValue={this.resetCurrentValue}
         invertSign={this.invertSign}
