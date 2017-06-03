@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches previous snapshot 1`] = `
+<div
+  className="controls"
+>
+  <Button
+    onClick={[Function]}
+    text="0"
+  />
+  <Button
+    onClick={[Function]}
+    text="1"
+  />
+  <Button
+    onClick={[Function]}
+    text="2"
+  />
+  <Button
+    onClick={[Function]}
+    text="3"
+  />
+  <Button
+    onClick={[Function]}
+    text="4"
+  />
+  <Button
+    onClick={[Function]}
+    text="5"
+  />
+  <Button
+    onClick={[Function]}
+    text="6"
+  />
+  <Button
+    onClick={[Function]}
+    text="7"
+  />
+  <Button
+    onClick={[Function]}
+    text="8"
+  />
+  <Button
+    onClick={[Function]}
+    text="9"
+  />
+</div>
+`;

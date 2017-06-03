@@ -1,0 +1,11 @@
+.button {
+    background-color: #DDDDDD;
+    border-radius: 3px;
+    margin-top: 5%;
+    flex: 1 1 auto;
+    font-size: 32px;
+}
+
+.button.double {
+    flex: 2 1 auto;
+}

@@ -1,0 +1,6 @@
+.controls {
+    margin-top: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    height: 250px;
+}
