@@ -129,7 +129,6 @@ class AppContainer extends Component {
         result = 0;
         break;
     }
-    console.log('result: ' + result);
     const negativeSign = result < 0;
     if (negativeSign) {
       result *= (-1);
