@@ -3,18 +3,20 @@ import { func, string } from 'prop-types';
 import './styles.css';
 
 const Button = ({
+  className,
   onClick,
   text,
 }) => (
-  <div
-    className="button"
+  <button
+    className={'button'.concat(className ? ` ${className}` : '')}
     onClick={onClick}
   >
     <span>{text}</span>
-  </div>
+  </button>
 );
 
 Button.propTypes = {
+  className: string,
   onClick: func,
   text: string,
 };

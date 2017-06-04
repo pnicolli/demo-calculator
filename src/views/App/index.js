@@ -5,9 +5,7 @@ import Controls from '../../views/Controls';
 
 const App = ({
   currentValue,
-  resetState,
-  resetCurrentValue,
-  invertSign,
+  controls,
 }) => (
   <div className="app">
     <div className="app-header">
@@ -15,20 +13,14 @@ const App = ({
     </div>
     <div className="app-content">
       <Display value={currentValue} />
-      <Controls
-        resetState={resetState}
-        resetCurrentValue={resetCurrentValue}
-        invertSign={invertSign}
-      />
+      <Controls controls={controls} />
     </div>
   </div>
 );
 
 App.propTypes = {
   currentValue: Display.propTypes.value,
-  resetState: Controls.propTypes.resetState,
-  resetCurrentValue: Controls.propTypes.resetCurrentValue,
-  invertSign: Controls.propTypes.invertSign,
+  controls: Controls.propTypes.controls,
 };
 
 export default App;

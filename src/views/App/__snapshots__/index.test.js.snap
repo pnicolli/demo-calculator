@@ -15,7 +15,17 @@ exports[`matches previous snapshot 1`] = `
     className="app-content"
   >
     <Display
-      value={42}
+      value="42"
+    />
+    <Controls
+      controls={
+        Array [
+          Object {
+            "onClick": [Function],
+            "text": "+",
+          },
+        ]
+      }
     />
   </div>
 </div>

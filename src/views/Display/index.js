@@ -1,5 +1,5 @@
 import React from 'react';
-import { number } from 'prop-types';
+import { string } from 'prop-types';
 import './styles.css';
 
 const Display = ({ value }) => (
@@ -9,7 +9,7 @@ const Display = ({ value }) => (
 );
 
 Display.propTypes = {
-  value: number,
+  value: string,
 };
 
 export default Display;

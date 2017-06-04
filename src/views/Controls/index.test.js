@@ -3,9 +3,7 @@ import { shallow } from 'enzyme';
 import Controls from './index';
 
 const baseProps = {
-  resetState: () => {},
-  resetCurrentValue: () => {},
-  invertSign: () => {},
+  controls: [{ text: '+', onClick: () => {} }],
 };
 
 it('matches previous snapshot', () => {

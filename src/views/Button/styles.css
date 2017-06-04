@@ -1,11 +1,33 @@
 .button {
-    background-color: #DDDDDD;
+    display: flex;
+    background-color: #E5E5E5;
+    border: 1px solid #DDDDDD;
     border-radius: 3px;
-    margin-top: 5%;
+    margin: 5px 2px 0;
     flex: 1 1 auto;
     font-size: 32px;
+    height: 45px;
+    width: 64px;
+}
+
+.button:active {
+    background-color: #E0E0E0;
 }
 
 .button.double {
-    flex: 2 1 auto;
+    height: 95px;
+}
+
+.button.dark {
+    background-color: #777777;
+    border: 0;
+    color: white;
+}
+
+.button.dark:active {
+    background-color: #707070;
+}
+
+.button span {
+    margin: auto;
 }
