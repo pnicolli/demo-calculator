@@ -160,24 +160,24 @@ class AppContainer extends Component {
   }
 
   controls = [
-    { text: 'AC', className: 'dark', onClick: this.resetState },
+    { text: 'AC', className: 'dark smaller', onClick: this.resetState },
     { text: '7', onClick: () => this.numberClick('7') },
     { text: '4', onClick: () => this.numberClick('4') },
     { text: '1', onClick: () => this.numberClick('1') },
     { text: '0', onClick: () => this.numberClick('0') },
-    { text: 'C', className: 'dark', onClick: this.resetCurrentValue },
+    { text: 'C', className: 'dark smaller', onClick: this.resetCurrentValue },
     { text: '8', onClick: () => this.numberClick('8') },
     { text: '5', onClick: () => this.numberClick('5') },
     { text: '2', onClick: () => this.numberClick('2') },
     { text: '.', className: 'dark', onClick: this.startDecimal },
-    { text: '+/-', className: 'dark', onClick: this.invertSign },
+    { text: '+/−', className: 'dark smaller', onClick: this.invertSign },
     { text: '9', onClick: () => this.numberClick('9') },
     { text: '6', onClick: () => this.numberClick('6') },
     { text: '3', onClick: () => this.numberClick('3') },
     { text: '=', className: 'dark', onClick: this.computeNow },
-    { text: '/', className: 'dark', onClick: () => this.setOperation('/') },
-    { text: 'x', className: 'dark', onClick: () => this.setOperation('x') },
-    { text: '-', className: 'dark', onClick: () => this.setOperation('-') },
+    { text: '÷', className: 'dark', onClick: () => this.setOperation('/') },
+    { text: '×', className: 'dark', onClick: () => this.setOperation('x') },
+    { text: '−', className: 'dark', onClick: () => this.setOperation('-') },
     { text: '+', className: 'dark double', onClick: () => this.setOperation('+') },
   ];
 

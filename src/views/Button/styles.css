@@ -1,11 +1,11 @@
 .button {
     display: flex;
-    background-color: #E5E5E5;
+    background-color: #E9E9E9;
     border: 1px solid #DDDDDD;
     border-radius: 3px;
     margin: 5px 2px 0;
     flex: 1 1 auto;
-    font-size: 32px;
+    font-size: 28px;
     height: 45px;
     width: 64px;
 }
@@ -26,6 +26,10 @@
 
 .button.dark:active {
     background-color: #707070;
+}
+
+.button.smaller {
+    font-size: 24px;
 }
 
 .button span {
