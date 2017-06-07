@@ -1,5 +1,7 @@
 import React from 'react';
 import './styles.css';
+import Display from '../../views/Display';
+import Controls from '../../views/Controls';
 
 const App = ({
   currentValue,
@@ -33,25 +35,16 @@ const App = ({
         <h1>Demo - Calculator</h1>
       </div>
       <div className="app-content">
-        <div className="display">
-          <span>{currentValue}</span>
-        </div>
-        <div className="controls">
-          {controls.map((control, index) => {
-            const { className, text } = control;
-            return (
-              <button
-                key={index}
-                className={'button'.concat(className ? ` ${className}` : '')}
-              >
-                <span>{text}</span>
-              </button>
-            );
-          })}
-        </div>
+        <Display value={currentValue} />
+        <Controls controls={controls} />
       </div>
     </div>
   );
+};
+
+App.propTypes = {
+  currentValue: Display.propTypes.value,
+  controls: Controls.propTypes.controls,
 };
 
 export default App;

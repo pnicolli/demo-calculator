@@ -1,0 +1,37 @@
+.button {
+    display: flex;
+    background-color: #E9E9E9;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    margin: 5px 2px 0;
+    flex: 1 1 auto;
+    font-size: 28px;
+    height: 45px;
+    width: 64px;
+}
+
+.button:active {
+    background-color: #E0E0E0;
+}
+
+.button.double {
+    height: 95px;
+}
+
+.button.dark {
+    background-color: #777777;
+    border: 0;
+    color: white;
+}
+
+.button.dark:active {
+    background-color: #707070;
+}
+
+.button.smaller {
+    font-size: 24px;
+}
+
+.button span {
+    margin: auto;
+}
