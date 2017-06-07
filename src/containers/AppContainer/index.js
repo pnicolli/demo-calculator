@@ -22,16 +22,11 @@ class AppContainer extends Component {
   resetState = () => this.setState(this.initialState);
 
   // C button
-  resetCurrentValue = () => this.setState((prevState, props) => (
-    Object.assign(
-      {},
-      this.initialState(),
-      {
-        firstOperand: prevState.firstOperand,
-        currentOperation: prevState.currentOperation,
-      }
-    )
-  ));
+  resetCurrentValue = () => this.setState((prevState, props) => ({
+    ...this.initialState(),
+    firstOperand: prevState.firstOperand,
+    currentOperation: prevState.currentOperation,
+  }));
 
   invertSign = () => this.setState((prevState, props) => ({
     negativeSign: !prevState.negativeSign,
@@ -48,15 +43,12 @@ class AppContainer extends Component {
   // TODO: unit test this
   numberClick = digit => this.setState((prevState, props) => {
     if (prevState.resetNumberOnNextDigit) {
-      return Object.assign(
-        {},
-        this.initialState(),
-        {
-          intValue: digit,
-          firstOperand: this.numFromState(prevState),
-          currentOperation: prevState.currentOperation,
-        }
-      );
+      return {
+        ...this.initialState(),
+        intValue: digit,
+        firstOperand: this.numFromState(prevState),
+        currentOperation: prevState.currentOperation,
+      };
     }
     if (prevState.showComma) {
       return { decimalValue: prevState.decimalValue.concat(digit) };
@@ -135,17 +127,14 @@ class AppContainer extends Component {
     }
     const numStrings = result.toString().split('.');
     const hasDecimal = numStrings.length > 1;
-    return Object.assign(
-      {},
-      this.initialState(),
-      {
-        intValue: numStrings[0],
-        decimalValue: hasDecimal ? numStrings[1] : '',
-        showComma: hasDecimal,
-        negativeSign: negativeSign,
-        resetNumberOnNextDigit: true,
-      }
-    );
+    return {
+      ...this.initialState(),
+      intValue: numStrings[0],
+      decimalValue: hasDecimal ? numStrings[1] : '',
+      showComma: hasDecimal,
+      negativeSign: negativeSign,
+      resetNumberOnNextDigit: true,
+    };
   };
 
   // compute text to display from given state

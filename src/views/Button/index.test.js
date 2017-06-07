@@ -14,7 +14,7 @@ it('matches previous snapshot', () => {
 
 it('calls the onClick callback', () => {
   const mock = jest.fn();
-  const props = Object.assign({}, baseProps, { onClick: mock });
+  const props = { ...baseProps, onClick: mock };
   const comp = shallow(<Button {...props} />);
   comp.simulate('click');
   expect(mock).toHaveBeenCalled();
